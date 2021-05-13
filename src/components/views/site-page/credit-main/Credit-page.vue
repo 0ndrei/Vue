@@ -185,4 +185,16 @@ body {
 .open-button:hover {
   opacity: 1;
 }
+
+@media only screen and (max-width: 1790px) {
+  .containers {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .containers {
+    margin: 0;
+  }
+}
 </style>

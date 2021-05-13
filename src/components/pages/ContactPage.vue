@@ -1,20 +1,20 @@
 <template>
     <section>
         <Header/>
-        <HomePage/>
+        <ContactPage/>
         <Footer/>
     </section>
 </template>
 
 <script>
     import Header from '@/components/views/header/Header'
-    import HomePage from '@/components/views/main-page/home-main/Home-page'
+    import ContactPage from '@/components/views/site-page/contact-main/Contact-page'
     import Footer from "@/components/views/footer/Footer";
 
     export default {
         name: "MainPage",
         components : {
-            Header, HomePage, Footer
+            Header, ContactPage, Footer
         }
     }
 </script>

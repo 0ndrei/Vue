@@ -8,7 +8,7 @@
 
 <script>
     import Header from '@/components/views/header/Header'
-    import CreditPage from '@/components/views/main-page/credit-main/Credit-page'
+    import CreditPage from '@/components/views/site-page/credit-main/Credit-page'
     import Footer from "@/components/views/footer/Footer";
 
     export default {

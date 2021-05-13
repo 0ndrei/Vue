@@ -1,20 +1,18 @@
 <template>
     <section>
         <Header/>
-        <HomePage/>
-        <Footer/>
+        <CartPage/>
     </section>
 </template>
 
 <script>
     import Header from '@/components/views/header/Header'
-    import HomePage from '@/components/views/main-page/home-main/Home-page'
-    import Footer from "@/components/views/footer/Footer";
+    import CartPage from '@/components/views/site-page/cart-main/Cart-page'
 
     export default {
         name: "MainPage",
         components : {
-            Header, HomePage, Footer
+            Header, CartPage
         }
     }
 </script>
