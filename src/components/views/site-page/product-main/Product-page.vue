@@ -18,7 +18,7 @@
             <div class="item-container">
                <div class="card-item">
                   <img :src="require('../../../../../static/img/tucano.png')" alt="img" class="card-img">
-                  <p class="item-name-index">Tucano BACKPACK RAPIDO15.6 ", Blue</p>
+                  <p class="item-name-index">Tucanoc BACKPACK RAPIDO15.6 ", Blue</p>
                </div>
                <h3 class="item-price">SOON</h3>
             </div>
