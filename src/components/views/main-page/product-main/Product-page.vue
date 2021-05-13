@@ -11,7 +11,7 @@
             <div class="item-container">
                <div class="card-item">
                   <img :src="require('../../../../../static/img/msi.png')" alt="img" class="card-img">
-                  <p class="item-name-index">MSI GF65 Thin Gaming 9SD-252US</p>
+                  <p class="item-name-index">MSI GF65 Thin Gaming 99SD-252US</p>
                </div>
                <h3 class="item-price">SOON</h3>
             </div>
