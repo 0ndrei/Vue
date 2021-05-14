@@ -103,7 +103,7 @@
             </tr>
          </table>
       </div>
-   </div>
+  </div>
 </main>
 </template>
 
@@ -142,48 +142,6 @@ body {
 
 * {
 	box-sizing: border-box;
-}
-
-.open-button {
-	background-color: rgb(166, 0, 0);
-	color: white;
-	padding: 16px 20px;
-	border: none;
-	cursor: pointer;
-	bottom: 23px;
-	width: 280px;
-}
-
-.form-popup {
-	display: none;
-	bottom: 0;
-	right: 15px;
-	border: 3px;
-	z-index: 9;
-}
-
-.form-container {
-	max-width: 100%;
-	padding: 10px;
-	background-color: white;
-}
-
-.form-container .btn {
-	color: white;
-	padding: 16px 20px;
-	border: none;
-	cursor: pointer;
-	width: 100%;
-	margin-bottom: 10px;
-}
-
-.form-container .cancel {
-	background-color: rgb(166, 0, 0);
-}
-
-.form-container .btn:hover,
-.open-button:hover {
-	opacity: 1;
 }
 
 @media only screen and (max-width: 1790px) {
