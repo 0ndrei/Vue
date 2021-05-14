@@ -112,7 +112,13 @@
         name: "CreditPage"
     }
 </script>
-
+export default {
+  data(){
+    return {
+      popupActivo:false,
+    }
+  }
+}
 <style scoped>
 #main {
 	margin-top: 0;

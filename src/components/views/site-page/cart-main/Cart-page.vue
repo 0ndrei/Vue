@@ -26,7 +26,7 @@
                   <input type="email" id="email" name="email" placeholder="Andrei@mail.ru">
                   <label for="address"><em class="fas fa-address-card"></em> Enter your address:</label>
                   <input type="text" id="address" name="address" placeholder="Stefan cel Mare 13/108">
-                  <label for="city"><em class="fas fa-city"></em> Enter your city:</label>
+                  <label for="city"><em class="fas fa-address-card"></em> Enter your city:</label>
                   <input type="text" id="city" name="city" placeholder="Balti">
                   <label for="comment"><em class="fas fa-comment"></em> Enter your comment:</label>
                   <input type="text" id="comment" name="comment" placeholder="Pack the product better please !!!">
@@ -38,7 +38,7 @@
                            <option value="5">DHL | 1-2 days| Price: $ 5</option>
                            <option value="10">UPS Express| 1 day | Price: $ 10</option>
                         </select>
-                        <button class="btn1" onclick="goshop()"><em class="fas fa-cart-plus"></em> Continue shopping</button>
+                        <button class="btn1" @click="goshop()"><em class="fas fa-cart-plus"></em> Continue shopping</button>
                         <button class="btn2" id="order__items"><em class="fa fa-credit-card"></em> Purchase now</button>
                      </div>
                   </div>
@@ -52,8 +52,13 @@
 
 <script>
     export default {
-        name: "CartPage"
-    }
+        name: "CartPage",
+    methods: {
+        goshop() {
+            this.$router.push("/products");
+        },
+    },
+}
 </script>
 
 <style scoped>

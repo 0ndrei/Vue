@@ -130,7 +130,7 @@ a {
 
 @media only screen and (max-width: 1790px) {
 	.footer {
-		margin-top: 0%;
+		margin-top: 2%;
 	}
 	.containers {
 		margin: 0;
