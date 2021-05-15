@@ -231,17 +231,7 @@ export default {
 	font-size: 0.95rem;
 }
 
-.add-to-cart {
-	font-size: 1.5rem;
-	color: rgb(166, 0, 0);
-	position: absolute;
-	bottom: 1rem;
-	right: 0.8rem;
-	cursor: pointer;
-	opacity: 0;
-}
-
-.item-container:hover .add-to-cart {
+.item-container:hover {
 	transition: all 0.7s ease-in-out;
 	opacity: 1;
 }

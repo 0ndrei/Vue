@@ -11,7 +11,7 @@
       <a @click="checkCurrentRoute($router, '/credit')"><em class="fa fa-percent"></em> Credit</a>
       <a @click="checkCurrentRoute($router, '/contact')"><em class="fa fa-phone"></em> Contact</a>
       <a @click="checkCurrentRoute($router, '/cart')" class="cart"><em class="fas fa-shopping-cart"></em> Cart <span id="cartValue"> 0</span></a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <a href="javascript:void(0);" class="icon" @click="myFunction()">
         <em class="fa fa-bars"></em>
       </a>
     </div>
