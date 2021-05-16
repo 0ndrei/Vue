@@ -10,7 +10,7 @@
             <ul>
                <li><br><em class="fa fa-phone" aria-hidden="true"></em> +373 231 63090</li>
                <li class="email"><br><em class="fa fa-envelope" aria-hidden="true"></em> info@atehno.md</li>
-               <li><br><em class="fa fa-clock-o" aria-hidden="true"></em> Schedule: Monday-Friday: 09:00 - 19:00 | Saturday: 09:00- 18:00 | Sunday: 09:00- 17:00
+               <li><br><em class="fa fa-clock" aria-hidden="true"></em> Schedule: Monday-Friday: 09:00 - 19:00 | Saturday: 09:00- 18:00 | Sunday: 09:00- 17:00
                </li>
             </ul>
          </div>
@@ -18,9 +18,9 @@
             <h2>Corporate Sales</h2>
             <hr>
             <ul>
-               <li><br><i class="fa fa-phone" aria-hidden="true"></i> +373 698 34025</li>
+               <li><br><em class="fa fa-phone" aria-hidden="true"></em> +373 698 34025</li>
                <li class="email"><br><em class="fa fa-envelope" aria-hidden="true"></em> ipetrov@atehno.md</li>
-               <li><br><em class="fa fa-clock-o" aria-hidden="true"></em> Schedule: Monday-Friday: 09:00 - 19:00 | Saturday: 09:00- 18:00 | Sunday: output
+               <li><br><em class="fa fa-clock" aria-hidden="true"></em> Schedule: Monday-Friday: 09:00 - 19:00 | Saturday: 09:00- 18:00 | Sunday: output
                </li>
             </ul>
          </div>
@@ -28,10 +28,10 @@
             <h2>Service-center</h2>
             <hr>
             <ul>
-               <li><br><i class="fa fa-map-marker" aria-hidden="true"></i> Moldova, Balti, Stefan cel Mare 76a.</li>
-               <li><br><i class="fa fa-phone" aria-hidden="true"></i> +373 231 63132</li>
+               <li><br><em class="fa fa-map-marker" aria-hidden="true"></em> Moldova, Balti, Stefan cel Mare 76a.</li>
+               <li><br><em class="fa fa-phone" aria-hidden="true"></em> +373 231 63132</li>
                <li class="email"><br><em class="fa fa-envelope" aria-hidden="true"></em> service@atehno.md</li>
-               <li><br><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule: Monday-Friday: 09:00 - 19:00 | Saturday: 09:00- 18:00 | Sunday: output
+               <li><br><em class="fa fa-clock" aria-hidden="true"></em> Schedule: Monday-Friday: 09:00 - 19:00 | Saturday: 09:00- 18:00 | Sunday: output
                </li>
             </ul>
          </div>
@@ -39,9 +39,9 @@
             <h2>Company office</h2>
             <hr>
             <ul>
-               <li><br><i class="fa fa-map-marker" aria-hidden="true"></i> Moldova, Balti, Stefan cel Mare 76a.</li>
+               <li><br><em class="fa fa-map-marker" aria-hidden="true"></em> Moldova, Balti, Stefan cel Mare 76a.</li>
                <li class="email"><br><em class="fa fa-envelope" aria-hidden="true"></em> info@atehno.md</li>
-               <li><br><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule: Monday-Friday: 09:00 - 19:00 | Saturday: 09:00- 18:00 | Sunday: output
+               <li><br><em class="fa fa-clock" aria-hidden="true"></em> Schedule: Monday-Friday: 09:00 - 19:00 | Saturday: 09:00- 18:00 | Sunday: output
                </li>
             </ul>
          </div>
