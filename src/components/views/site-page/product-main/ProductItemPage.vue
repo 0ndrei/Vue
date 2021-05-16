@@ -1,47 +1,27 @@
 <template>
 <div>
-<link rel="stylesheet" 
-        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
-        crossorigin="anonymous">
-<main id="main">
-   <div class="containers">
-      <h1>Products</h1>
-      <img class="imgnote" src="https://api.scoaladebani.ro/storage/73/8-produs-creditare.png" alt="">
-      <!-- Notebooks -->
-      <section class="categories">
-         <div class="title-container">
-         </div>
-         <div class="card" id="cardItems">
-            <div class="item-container">
+            <div class="item-container" data-id="1">
                <div class="card-item">
-                  <img :src="require('../../../../../static/img/note25.png')" alt="img" class="card-img">
-                  <p class="item-name-index">DELL Inspiron</p>
-                  <p class="item-description">DELL Inspiron Gaming 15 G5 Black (5500)+W10H, 15.6'' 300Hz WVA FHD300 nits (IntelCore i7-10750H, 2.6-5.0GHz, 16GB (2x8) DDR4 RAM, 1TB M.2 PCIe SSD, GeForce GTX  1660Ti 6GB GDDR6CR, WiFi6-AC/BT5, 4cell, HD Webcam,Win10H,2.34kg).</p>
+                  <img :src="require(`../../../../../static/img/${product_data.tag}.png`)" alt="img" class="card-img">
+                  <p class="item-name">{{product_data.name}}</p>
+                  <p class="item-description">{{product_data.description}}</p>
                </div>
-               <h3 class="item-price">Price: $ 1970</h3>
-               <a class="add-cart"><em class="fas fa-shopping-basket add-to-cart"></em></a>
-            </div>
-            <div class="item-container">
-               <div class="card-item">
-                  <img :src="require('../../../../../static/img/note27.png')" alt="img" class="card-img">
-                  <p class="item-name-index">Apple MacBook Air</p>
-                  <p class="item-description">Laptop Apple MacBook Air, 13.3'' Space Grey, Retina 2560x1600, Apple M1 8-Core, 8GB, SSD 256GB + B Intel® Optane, GPU Apple M1 7-Core, 802.11ax, 2xThunderbolt v3, 2xThunderbolt v3,2xUSB4, Mac OS Big Sur, RU, 50Wh, 1.29Kg.</p>
-               </div>
-               <h3 class="item-price">Price: $ 1920</h3>
-               <a class="add-cart"><em class="fas fa-shopping-basket add-to-cart"></em></a>
+               <h3 class="item-price"> Price : <span class="item-price-value">{{product_data.price}}</span> $ </h3>
+               <a @click="$emit('addToCart', product_data)"><em class="fas fa-shopping-basket add-to-cart"></em></a>
             </div>
          </div>
-      </section>
-   </div>
-</main>
-</div>
 </template>
 
 <script>
 export default {
-    name: "ProductPage"
-}
+    name: "ProductItemPage",
+	props: {
+            product_data: {
+                type: Object,
+                default: () => ({})
+            }
+        }
+    }
 </script>
 
 <style scoped>
@@ -104,14 +84,6 @@ export default {
 }
 
 .item-name {
-	text-align: center;
-	font-weight: bold;
-	color: rgb(166, 0, 0);
-	margin-top: 1rem;
-	font-size: 0.95rem;
-}
-
-.item-name-index {
 	text-align: center;
 	font-weight: bold;
 	color: black;
