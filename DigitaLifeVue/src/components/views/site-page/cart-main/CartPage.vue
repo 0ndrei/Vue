@@ -104,13 +104,13 @@
         }
         .quantity {
             display: flex;
-            margin-left: 80px;
-            justify-content: flex-start;
+            margin-left: 60%;
+            justify-content: flex-end;;
         }
         .price {
             display: flex;
-            margin-left: 10px;
-            justify-content: flex-start;
+            margin-left: 20%;
+            justify-content: center;
         }
     }
      @media screen and (max-width: 400px) {
