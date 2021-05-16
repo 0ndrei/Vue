@@ -44,7 +44,7 @@
         max-width: 680px;
         display: flex;
         justify-content: flex-start;
-        border-bottom: 4px solid gray;
+        border-bottom: 4px solid rgb(166, 0, 0);
         margin: 0 auto;
     }
 
@@ -71,15 +71,31 @@
     }
     .quantity {
         display: flex;
-        margin-left: 210px;
+        margin-left: 220px;
         justify-content: flex-start;
     }
     .price {
         display: flex;
-        margin-left: 70px;
-        justify-content: flex-start;
+        margin-left: 50px;
+        justify-content: center;
     }
-
+    @media screen and (max-width: 678px) {
+        .product-title {
+            display: flex;
+            margin-left: 70px;
+            justify-content: flex-start;
+        }
+        .quantity {
+            display: flex;
+    margin-left: 250px;
+    justify-content: flex-start;
+        }
+        .price {
+            display: flex;
+            margin-left: 90px;
+            justify-content: flex-start;
+        }
+    }
     @media screen and (max-width: 620px) {
         .product-title {
             display: flex;
@@ -88,12 +104,29 @@
         }
         .quantity {
             display: flex;
-            margin-left: 100px;
+            margin-left: 80px;
             justify-content: flex-start;
         }
         .price {
             display: flex;
-            margin-left: 7px;
+            margin-left: 10px;
+            justify-content: flex-start;
+        }
+    }
+     @media screen and (max-width: 400px) {
+        .product-title {
+            display: flex;
+            margin-left: 70px;
+            justify-content: flex-start;
+        }
+        .quantity {
+            display: flex;
+            margin-left: 80px;
+            justify-content: flex-start;
+        }
+        .price {
+            display: flex;
+            margin-left: 10px;
             justify-content: flex-start;
         }
     }
