@@ -38,7 +38,7 @@
          <div class="title-container">
             <hr>
             <h2 class="title">
-               Products waiting
+               Products waitiing
             </h2>
             <hr>
          </div>
