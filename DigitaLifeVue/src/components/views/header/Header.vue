@@ -10,7 +10,7 @@
       <a @click="checkCurrentRoute($router, '/products')"><em class="fas fa-archive"></em> Products</a>
       <a @click="checkCurrentRoute($router, '/credit')"><em class="fa fa-percent"></em> Credit</a>
       <a @click="checkCurrentRoute($router, '/contact')"><em class="fa fa-phone"></em> Contact</a>
-      <a @click="checkCurrentRoute($router, '/cart')" class="cart"><em class="fas fa-shopping-cart"></em> Cart <span id="cartValue"> 0</span></a>
+      <a @click="checkCurrentRoute($router, '/cart')" class="cart"><em class="fas fa-shopping-cart"></em> Cart <span id="cartValue">{{COUNT}}</span></a>
       <a class="icon" @click="toggleMenu">
         <em class="fa fa-bars"></em>
       </a>
@@ -21,6 +21,7 @@
 
 <script>
 import { checkCurrentRoute } from "@/router/routeCheck";
+import {mapGetters} from "vuex";
 
 export default {
  name: "Header",
@@ -33,6 +34,7 @@ export default {
             this.isToggled = !this.isToggled;
         },
     },
+	computed: mapGetters(['COUNT'])
 };
 </script>
 
