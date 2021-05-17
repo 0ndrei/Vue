@@ -2,8 +2,8 @@
 <div>
             <div class="item-container" data-id="1">
                <div class="card-item">
+				<p class="item-name">{{product_data.name}}</p>
                   <img :src="require(`../../../../../static/img/${product_data.tag}.png`)" alt="img" class="card-img">
-                  <p class="item-name">{{product_data.name}}</p>
                   <p class="item-description">{{product_data.description}}</p>
                </div>
                <h3 class="item-price"> Price : <span class="item-price-value">{{product_data.price}}</span> $ </h3>
@@ -84,11 +84,12 @@ export default {
 }
 
 .item-name {
+	padding: 5px;
 	text-align: center;
-	font-weight: bold;
-	color: black;
-	margin-top: 1rem;
-	font-size: 0.95rem;
+  font-weight: bold;
+  color: rgb(166, 0, 0);
+  margin-top: 1rem;
+  font-size: 0.95rem;
 }
 
 .item-description {

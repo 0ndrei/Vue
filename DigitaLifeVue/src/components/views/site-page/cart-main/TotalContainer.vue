@@ -2,7 +2,7 @@
     <div>
         <div class="total__container">
             <div class="basketTotalContainer">
-                <h4 class="basketTotalTitle">Total Price</h4>
+                <h4 class="basketTotalTitle">Basket Total</h4>
                 <h4 class="basketTotal">${{$cart.cartSum(CART, parseInt(shippingPrice))}}</h4>
             </div>
         </div>

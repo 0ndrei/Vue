@@ -8,7 +8,7 @@ const store = new Vuex.Store({
         products: [],
         cart: JSON.parse(localStorage.getItem('cart')) || []
     },
-    mutations: { // should modify state
+    mutations: {
         SET_PRODUCTS: (state, products) => {
             state.products = products;
         },

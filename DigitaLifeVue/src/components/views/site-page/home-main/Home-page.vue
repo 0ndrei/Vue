@@ -246,9 +246,6 @@ export default {
 	width: 100%;
 }
 
-
-/* Product index */
-
 .bady-index {
 	height: 100%;
 	width: 100%;
