@@ -30,7 +30,7 @@
     import {mapActions} from "vuex";
 
     export default {
-        name: "CartItem",
+        name: "CartItemPage.",
         props: {
             product_data: {
                 type: Object,

@@ -55,7 +55,7 @@
     import {mapActions, mapGetters} from "vuex";
 
     export default {
-        name: "PriceContainer",
+        name: "TotalContainer",
         data: () => ({
             city: '',
             shippingPrice: 0,

@@ -2,19 +2,19 @@
     <section>
         <Header/>
         <CartPage/>
-        <PriceContainer/>
+        <TotalContainer/>
     </section>
 </template>
 
 <script>
     import Header from '@/components/views/header/Header'
     import CartPage from '@/components/views/site-page/cart-main/CartPage';
-    import PriceContainer from '@/components/views/site-page/cart-main/PriceContainer';
+    import TotalContainer from '@/components/views/site-page/cart-main/TotalContainer';
 
     export default {
         name: "MainPage",
       components: {
-    Header, CartPage, PriceContainer
+    Header, CartPage, TotalContainer
   },
 };
 </script>

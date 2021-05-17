@@ -7,7 +7,7 @@
                 <h5 class="price">PRICE</h5>
             </div>
             <ul class="products">
-                <CartItem
+                <CartItemPage
                         :key="product.id"
                         :product_data="product"
                         v-for="product in CART"/>
@@ -17,12 +17,12 @@
 </template>
 
 <script>
-    import CartItem from "./CartItem";
+    import CartItemPage from "./CartItemPage";
     import {mapGetters} from "vuex";
     export default {
         name: "CartPage",
         components : {
-            CartItem
+            CartItemPage
         },
         computed: mapGetters(['CART'])
     }
