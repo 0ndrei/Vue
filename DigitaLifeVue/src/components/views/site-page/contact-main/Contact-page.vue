@@ -53,9 +53,9 @@
 </template>
 
 <script>
-    export default {
-        name: "ContactPage"
-    }
+export default {
+    name: "ContactPage"
+}
 </script>
 
 <style scoped>

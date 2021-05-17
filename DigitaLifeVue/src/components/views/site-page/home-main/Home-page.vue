@@ -1,5 +1,5 @@
 <template>
-  <main>
+<main>
    <div class="container-index">
       <div class="left-column">
          <img data-image="red" class="active-index" :src="require('../../../../../static/img/msitop.png')" alt="">

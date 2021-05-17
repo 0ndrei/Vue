@@ -27,118 +27,109 @@
 </template>
 
 <script>
-    import {mapActions} from "vuex";
+import {mapActions} from "vuex";
 
-    export default {
-        name: "CartItemPage.",
-        props: {
-            product_data: {
-                type: Object,
-                default: () => ({})
-            }
-        },
-        methods: mapActions(['REMOVE_PRODUCT', 'INCREASE_QUANTITY', 'DECREASE_QUANTITY'])
-    }
+export default {
+    name: "CartItemPage.",
+    props: {
+        product_data: {
+            type: Object,
+            default: () => ({})
+        }
+    },
+    methods: mapActions(['REMOVE_PRODUCT', 'INCREASE_QUANTITY', 'DECREASE_QUANTITY'])
+}
 </script>
 
 <style scoped>
 .products li {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 0;
+	grid-row-gap: 0;
 }
 
 .remove__btn {
-    margin-top: 5px;
-  grid-area: 1 / 1 / 2 / 2;
+	margin-top: 5px;
+	grid-area: 1 / 1 / 2 / 2;
 }
 
-
 .product__name {
-    margin-top: 5px;
-  display: flex;
-    justify-content: flex-start;
+	margin-top: 5px;
+	display: flex;
+	justify-content: flex-start;
 }
 
 .product__price {
-    margin-top: 5px;
-  display: flex;
-  justify-content: center;
+	margin-top: 5px;
+	display: flex;
+	justify-content: center;
 }
 
 .product__quantity {
-    margin-top: 5px;
-    display: flex;
-  justify-content: center;
-
+	margin-top: 5px;
+	display: flex;
+	justify-content: center;
 }
 
 .product__img img {
-    margin-top: 5px;
-  width: 65px;
-   display: flex;
-  justify-content: center;
+	margin-top: 5px;
+	width: 65px;
+	display: flex;
+	justify-content: center;
 }
 
 @media screen and (max-width: 700px) {
-  .product__name {
-    margin-left: 35px;
-    grid-area: 1 / 3 / 2 / 4;
-  }
-
+	.product__name {
+		margin-left: 35px;
+		grid-area: 1 / 3 / 2 / 4;
+	}
 }
+
 @media screen and (max-width: 620px) {
-        
-    .products li {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
+	.products li {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: 0;
+		grid-row-gap: 0;
+	}
+	.product__name {
+		margin-left: 35px;
+		grid-area: 1 / 1 / 2 / 4;
+	}
+	.product__img img {
+		display: none;
+	}
+	.product__quantity {
+		grid-area: 1 / 2 / 2 / 4;
+	}
+	.product__price {
+		grid-area: 1 / 3 / 2 / 4;
+	}
 }
-  .product__name {
-    margin-left: 35px;
-    grid-area: 1 / 1 / 2 / 4;
-  }
 
-  .product__img img {
-    display: none;
-  }
-  .product__quantity {
-    grid-area: 1 / 2 / 2 / 4;
-
-}
-.product__price {
-  grid-area: 1 / 3 / 2 / 4;
-
-}
-}
 @media screen and (max-width: 400px) {
-        
-    .products li {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
-}
-  .product__name {
-    margin-left: 35px;
-    grid-area: 1 / 1 / 2 / 4;
-  }
-
-  .product__img img {
-    display: none;
-  }
-  .product__quantity {
-    grid-area: 1 / 2 / 2 / 4;
-
-}
-.product__price {
-  grid-area: 1 / 3 / 2 / 4;
-
-}
+	.products li {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: 0;
+		grid-row-gap: 0;
+	}
+	.product__name {
+		margin-left: 35px;
+		grid-area: 1 / 1 / 2 / 4;
+	}
+	.product__img img {
+		display: none;
+	}
+	.product__quantity {
+		grid-area: 1 / 2 / 2 / 4;
+	}
+	.product__price {
+		grid-area: 1 / 3 / 2 / 4;
+	}
 }
 </style>

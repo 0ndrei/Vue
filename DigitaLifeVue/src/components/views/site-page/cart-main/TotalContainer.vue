@@ -52,198 +52,196 @@
 </template>
 
 <script>
-    import {mapActions, mapGetters} from "vuex";
+import {mapActions, mapGetters} from "vuex";
 
-    export default {
-        name: "TotalContainer",
-        data: () => ({
-            city: '',
-            shippingPrice: 0,
-            address: '',
-            phone: '',
-            full__name: '',
-            email: '',
-        }),
-        computed: mapGetters(["CART"]),
-        methods: {
-            ...mapActions(['CLEAR__CART']),
-            validateForm() {
+export default {
+    name: "TotalContainer",
+    data: () => ({
+        city: '',
+        shippingPrice: 0,
+        address: '',
+        phone: '',
+        full__name: '',
+        email: '',
+    }),
+    computed: mapGetters(["CART"]),
+    methods: {
+        ...mapActions(['CLEAR__CART']),
+        validateForm() {
 
-                const full__nameRegexp = /^[a-zA-Z ]{2,30}$/;
-                if (!(new RegExp(full__nameRegexp).test(this.full__name))) {
-                    console.log("Wrong Name");
-                    return;
-                }
-
-                const phoneRegexp = /^[+373|373]*[0]*[0-9]{7,8}$/;
-                if (!(new RegExp(phoneRegexp).test(this.phone))) {
-                    console.log("Wrong Phone Number");
-                    return;
-                }
-
-
-                const emailRegexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-                if (!new RegExp(emailRegexp).test(this.email)) {
-                    console.log("Wrong Email");
-                    return;
-                }
-
-                const addressRegexp = /^[a-zA-Z0-9\s,'-]{4,}$/;
-                if (!(new RegExp(addressRegexp).test(this.address) && (this.address.length < 20))) {
-                    console.log("Wrong Address");
-                    return;
-                }
-
-                const cityRegexp = /^[a-zA-z] ?([a-zA-z]|[a-zA-z] )*[a-zA-z]$/;
-                if (!(new RegExp(cityRegexp).test(this.city))) {
-                    console.log("Wrong City");
-                    return;
-                }
-
-
-
-                localStorage.setItem("full__name", this.full__name);
-                localStorage.setItem("phone", this.phone);
-                localStorage.setItem("email", this.email);
-                localStorage.setItem("address", this.address);
-                localStorage.setItem("city", this.city);
-                localStorage.setItem("orderedItems", JSON.stringify(this.CART));
-                localStorage.setItem("shippingPrice", this.shippingPrice.toString());
-
-                this.CLEAR__CART();
-                this.shippingPrice = 0;
-
-                alert("Your order has been taken over by the administrator and you will be called soon.");
+            const full__nameRegexp = /^[a-zA-Z ]{2,30}$/;
+            if (!(new RegExp(full__nameRegexp).test(this.full__name))) {
+                console.log("Wrong Name");
+                return;
             }
-        },
-    }
+
+            const phoneRegexp = /^[+373|373]*[0]*[0-9]{7,8}$/;
+            if (!(new RegExp(phoneRegexp).test(this.phone))) {
+                console.log("Wrong Phone Number");
+                return;
+            }
+
+
+            const emailRegexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if (!new RegExp(emailRegexp).test(this.email)) {
+                console.log("Wrong Email");
+                return;
+            }
+
+            const addressRegexp = /^[a-zA-Z0-9\s,'-]{4,}$/;
+            if (!(new RegExp(addressRegexp).test(this.address) && (this.address.length < 20))) {
+                console.log("Wrong Address");
+                return;
+            }
+
+            const cityRegexp = /^[a-zA-z] ?([a-zA-z]|[a-zA-z] )*[a-zA-z]$/;
+            if (!(new RegExp(cityRegexp).test(this.city))) {
+                console.log("Wrong City");
+                return;
+            }
+
+
+
+            localStorage.setItem("full__name", this.full__name);
+            localStorage.setItem("phone", this.phone);
+            localStorage.setItem("email", this.email);
+            localStorage.setItem("address", this.address);
+            localStorage.setItem("city", this.city);
+            localStorage.setItem("orderedItems", JSON.stringify(this.CART));
+            localStorage.setItem("shippingPrice", this.shippingPrice.toString());
+
+            this.CLEAR__CART();
+            this.shippingPrice = 0;
+
+            alert("Your order has been taken over by the administrator and you will be called soon.");
+        }
+    },
+}
 </script>
 
 <style scoped>
 .basketTotalContainer {
-  display: flex;
-  justify-content: flex-end;
-  width: 60%;
-  padding: 10px 0;
+	display: flex;
+	justify-content: flex-end;
+	width: 60%;
+	padding: 10px 0;
 }
 
 .basketTotalTitle {
-    display: flex;
-  justify-content: flex-start;
-  width: 100px;
+	display: flex;
+	justify-content: flex-start;
+	width: 100px;
 }
 
 .basketTotal {
-    display: flex;
-  justify-content: flex-start;
+	display: flex;
+	justify-content: flex-start;
 }
 
 .categories {
-  margin-top: 25px;
+	margin-top: 25px;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  padding-bottom: 100px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+	padding-bottom: 100px;
 }
 
 .row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0 -16px;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: 0 -16px;
 }
 
 .coldelivery {
-  -ms-flex: 50%;
-  flex: 50%;
+	-ms-flex: 50%;
+	flex: 50%;
 }
 
 .colsection {
-  -ms-flex: 75%;
-  flex: 75%;
+	-ms-flex: 75%;
+	flex: 75%;
 }
 
 .coldelivery,
 .colsection {
-  padding: 0 16px;
+	padding: 0 16px;
 }
 
 input[type="text"],
 select {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
 }
 
 input[type="email"],
 select {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
 }
 
 label {
-  margin-bottom: 10px;
-  display: block;
+	margin-bottom: 10px;
+	display: block;
 }
 
 .btn1 {
-  background-color: rgb(166, 0, 0);
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
+	background-color: rgb(166, 0, 0);
+	color: white;
+	padding: 12px;
+	margin: 10px 0;
+	border: none;
+	width: 100%;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 17px;
 }
 
 .btn2 {
-  background-color: rgb(166, 0, 0);
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
+	background-color: rgb(166, 0, 0);
+	color: white;
+	padding: 12px;
+	margin: 10px 0;
+	border: none;
+	width: 100%;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 17px;
 }
+
 .btn1:hover {
-  background-color: #949494;
+	background-color: #949494;
 }
 
 .btn2:hover {
-  background-color: #949494;
+	background-color: #949494;
 }
 
 hr {
-  border: 1px solid lightgrey;
+	border: 1px solid lightgrey;
 }
 
 @media screen and (max-width: 620px) {
-        .basketTotalContainer {
-            display: flex;
-            justify-content: center;
-            margin-left: 50px;
-            width: 100%;
-            padding: 10px 0;
-        }
-
-        .basketTotal {
-            width: fit-content;
-        }
-
-
-    }
+	.basketTotalContainer {
+		display: flex;
+		justify-content: center;
+		margin-left: 50px;
+		width: 100%;
+		padding: 10px 0;
+	}
+	.basketTotal {
+		width: fit-content;
+	}
+}
 </style>

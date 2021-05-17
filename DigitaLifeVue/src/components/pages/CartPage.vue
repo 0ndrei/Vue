@@ -7,15 +7,17 @@
 </template>
 
 <script>
-    import Header from '@/components/views/header/Header'
-    import CartPage from '@/components/views/site-page/cart-main/CartPage';
-    import TotalContainer from '@/components/views/site-page/cart-main/TotalContainer';
+import Header from '@/components/views/header/Header'
+import CartPage from '@/components/views/site-page/cart-main/CartPage';
+import TotalContainer from '@/components/views/site-page/cart-main/TotalContainer';
 
-    export default {
-        name: "MainPage",
-      components: {
-    Header, CartPage, TotalContainer
-  },
+export default {
+    name: "MainPage",
+    components: {
+        Header,
+        CartPage,
+        TotalContainer
+    },
 };
 </script>
 

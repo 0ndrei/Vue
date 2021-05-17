@@ -108,17 +108,11 @@
 </template>
 
 <script>
-    export default {
-        name: "CreditPage"
-    }
-</script>
 export default {
-  data(){
-    return {
-      popupActivo:false,
-    }
-  }
+  name: "CreditPage"
 }
+</script>
+
 <style scoped>
 #main {
 	margin-top: 0;

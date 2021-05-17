@@ -1,15 +1,15 @@
 <template>
 <div>
-            <div class="item-container" data-id="1">
-               <div class="card-item">
-				<p class="item-name">{{product_data.name}}</p>
-                  <img :src="require(`../../../../../static/img/${product_data.tag}.png`)" alt="img" class="card-img">
-                  <p class="item-description">{{product_data.description}}</p>
-               </div>
-               <h3 class="item-price"> Price : <span class="item-price-value">{{product_data.price}}</span> $ </h3>
-               <a @click="$emit('addToCart', product_data)"><em class="fas fa-shopping-basket add-to-cart"></em></a>
-            </div>
-         </div>
+   <div class="item-container" data-id="1">
+      <div class="card-item">
+         <p class="item-name">{{product_data.name}}</p>
+         <img :src="require(`../../../../../static/img/${product_data.tag}.png`)" alt="img" class="card-img">
+         <p class="item-description">{{product_data.description}}</p>
+      </div>
+      <h3 class="item-price"> Price : <span class="item-price-value">{{product_data.price}}</span> $ </h3>
+      <a @click="$emit('addToCart', product_data)"><em class="fas fa-shopping-basket add-to-cart"></em></a>
+   </div>
+</div>
 </template>
 
 <script>

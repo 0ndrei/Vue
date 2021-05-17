@@ -1,21 +1,21 @@
 <template>
 <div>
-	<link rel="stylesheet" 
-        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
-        crossorigin="anonymous">
-  <header>
-    <div class="topnav" id="myTopnav" :class="[isToggled ? 'responsive' : '']">
-      <a @click="checkCurrentRoute($router, '/')" class="active"><em class="fa fa-home"></em> Home</a>
-      <a @click="checkCurrentRoute($router, '/products')"><em class="fas fa-archive"></em> Products</a>
-      <a @click="checkCurrentRoute($router, '/credit')"><em class="fa fa-percent"></em> Credit</a>
-      <a @click="checkCurrentRoute($router, '/contact')"><em class="fa fa-phone"></em> Contact</a>
-      <a @click="checkCurrentRoute($router, '/cart')" class="cart"><em class="fas fa-shopping-cart"></em> Cart <span id="cartValue">{{COUNT}}</span></a>
-      <a class="icon" @click="toggleMenu">
-        <em class="fa fa-bars"></em>
-      </a>
-    </div>
-  </header>
+   <link rel="stylesheet" 
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
+      crossorigin="anonymous">
+   <header>
+      <div class="topnav" id="myTopnav" :class="[isToggled ? 'responsive' : '']">
+         <a @click="checkCurrentRoute($router, '/')" class="active"><em class="fa fa-home"></em> Home</a>
+         <a @click="checkCurrentRoute($router, '/products')"><em class="fas fa-archive"></em> Products</a>
+         <a @click="checkCurrentRoute($router, '/credit')"><em class="fa fa-percent"></em> Credit</a>
+         <a @click="checkCurrentRoute($router, '/contact')"><em class="fa fa-phone"></em> Contact</a>
+         <a @click="checkCurrentRoute($router, '/cart')" class="cart"><em class="fas fa-shopping-cart"></em> Cart <span id="cartValue">{{COUNT}}</span></a>
+         <a class="icon" @click="toggleMenu">
+         <em class="fa fa-bars"></em>
+         </a>
+      </div>
+   </header>
 </div>
 </template>
 
@@ -24,7 +24,7 @@ import { checkCurrentRoute } from "@/router/routeCheck";
 import {mapGetters} from "vuex";
 
 export default {
- name: "Header",
+    name: "Header",
     data: () => ({
         isToggled: false,
         checkCurrentRoute,
@@ -34,7 +34,7 @@ export default {
             this.isToggled = !this.isToggled;
         },
     },
-	computed: mapGetters(['COUNT'])
+    computed: mapGetters(['COUNT'])
 };
 </script>
 

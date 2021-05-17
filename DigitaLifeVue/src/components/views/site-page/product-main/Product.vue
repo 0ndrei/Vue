@@ -5,12 +5,12 @@
       <img class="imgnote" src="https://api.scoaladebani.ro/storage/73/8-produs-creditare.png" alt="">
       <section class="categories">
          <div class="card" id="cardItems">
-<ProductItemPage
-                            :key="product.id"
-                            :product_data="product"
-                            @addToCart="showResult"
-                            v-for="product in PRODUCTS"
-                        />
+            <ProductItemPage
+               :key="product.id"
+               :product_data="product"
+               @addToCart="showResult"
+               v-for="product in PRODUCTS"
+               />
          </div>
       </section>
    </div>
@@ -18,29 +18,32 @@
 </template>
 
 <script>
-  import {mapActions, mapGetters} from "vuex";
-    import ProductItemPage from "./ProductItemPage"
+import {mapActions, mapGetters} from "vuex";
+import ProductItemPage from "./ProductItemPage"
 
 export default {
-        name: "Product",
-        components : {
-            ProductItemPage
-        },
-        methods: {
-            ...mapActions(['GET_PRODUCTS', 'ADD_CART', 'INCREASE_QUANTITY']),
-            showResult(product) {
-                const currProduct = {...product, quantity: 1};
+    name: "Product",
+    components: {
+        ProductItemPage
+    },
+    methods: {
+        ...mapActions(['GET_PRODUCTS', 'ADD_CART', 'INCREASE_QUANTITY']),
+        showResult(product) {
+            const currProduct = {
+                ...product,
+                quantity: 1
+            };
 
-                if (this.$cart.inCart(this.CART, product)) this.INCREASE_QUANTITY(product);
-                if (!this.$cart.inCart(this.CART, product)) this.ADD_CART(currProduct);
+            if (this.$cart.inCart(this.CART, product)) this.INCREASE_QUANTITY(product);
+            if (!this.$cart.inCart(this.CART, product)) this.ADD_CART(currProduct);
 
-            }
-        },
-        computed: mapGetters(['PRODUCTS', 'CART']),
-        async mounted() {
-            await this.GET_PRODUCTS();
         }
-    };
+    },
+    computed: mapGetters(['PRODUCTS', 'CART']),
+    async mounted() {
+        await this.GET_PRODUCTS();
+    }
+};
 </script>
 
 <style scoped>
