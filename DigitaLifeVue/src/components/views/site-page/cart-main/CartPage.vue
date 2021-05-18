@@ -42,11 +42,12 @@ export default {
 }
 
 .product-header {
+	background: rgb(166, 0, 0);
+	color: white;
 	width: 100%;
 	max-width: 680px;
 	display: flex;
 	justify-content: flex-start;
-	border-bottom: 4px solid rgb(166, 0, 0);
 	margin: 0 auto;
 }
 

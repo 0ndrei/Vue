@@ -79,6 +79,9 @@ export default {
 	display: flex;
 	justify-content: center;
 }
+.fa-plus-circle, .fa-minus-circle, .fa-trash-alt{
+color: rgb(166, 0, 0);
+}
 
 @media screen and (max-width: 700px) {
 	.product__name {

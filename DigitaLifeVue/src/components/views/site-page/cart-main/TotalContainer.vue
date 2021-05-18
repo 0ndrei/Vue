@@ -20,7 +20,7 @@
                                     <input type="text" id="full__name" name="firstname" placeholder="Andrei Lungu" v-model="full__name"/>
                                     <label for="phone"><em class="fa fa-phone"></em> Enter your phone:</label>
                                     <input type="text" id="phone" name="phone" placeholder="+37369098833" v-model="phone"/>
-                                    <label for="email"><i class="fa fa-envelope"></i> Enter your email</label>
+                                    <label for="email"><em class="fa fa-envelope"></em> Enter your email</label>
                                     <input type="email" id="email" name="email" placeholder="Andrei@mail.ru" v-model="email"/>
                                     <label for="address"><em class="fas fa-address-card"></em> Enter your address:</label>
                                     <input type="text" id="address" name="address" placeholder="Stefan cel Mare 13/108" v-model="address"/>
