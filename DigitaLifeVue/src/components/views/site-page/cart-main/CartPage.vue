@@ -52,6 +52,8 @@ export default {
 }
 
 .product-header {
+	height: 30px;
+    padding: 7px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 1fr;

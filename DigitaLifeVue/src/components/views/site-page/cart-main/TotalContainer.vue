@@ -1,54 +1,52 @@
 <template>
-    <div>
-        <div class="total__container">
-            <div class="basketTotalContainer">
-                <h4 class="basketTotalTitle">Basket Total</h4>
-                <h4 class="basketTotal">${{$cart.cartSum(CART, parseInt(shippingPrice))}}</h4>
-            </div>
-        </div>
-
-  <div class="containers">
-        <div class="row">
-            <div class="colsection">
+  <div>
+   <div class="total__container">
+      <div class="basketTotalContainer">
+         <h4 class="basketTotalTitle">Basket Total</h4>
+         <h4 class="basketTotal">${{$cart.cartSum(CART, parseInt(shippingPrice))}}</h4>
+      </div>
+   </div>
+   <div class="containers">
+      <div class="row">
+         <div class="colsection">
             <section class="form-container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="coldelivery">
-                                    <h1>BUY RIGHT NOW!!!</h1>
-                                    <br>
-                                    <label for="full__name"><em class="fa fa-user"></em> Enter your name:</label>
-                                    <input type="text" id="full__name" name="firstname" placeholder="Andrei Lungu" v-model="full__name"/>
-                                    <label for="phone"><em class="fa fa-phone"></em> Enter your phone:</label>
-                                    <input type="text" id="phone" name="phone" placeholder="+37369098833" v-model="phone"/>
-                                    <label for="email"><em class="fa fa-envelope"></em> Enter your email</label>
-                                    <input type="email" id="email" name="email" placeholder="Andrei@mail.ru" v-model="email"/>
-                                    <label for="address"><em class="fas fa-address-card"></em> Enter your address:</label>
-                                    <input type="text" id="address" name="address" placeholder="Stefan cel Mare 13/108" v-model="address"/>
-                                    <label for="city"><em class="fas fa-city"></em> Enter your city:</label>
-                                    <input type="text" id="city" name="city" placeholder="Balti" v-model="city">
-                                    <label for="comment"><em class="fas fa-comment"></em> Enter your comment:</label>
-                                    <input type="text" id="comment" name="comment" placeholder="Pack the product better please !!!">
-                                    <div class="row">
-                                        <div class="coldelivery">
-                                            <label for="delivery"><em class="fas fa-shipping-fast"></em> Delivery</label>
-                                            <select id="delivery" name="delivery"  v-model="shippingPrice">
-                                                <option value="0" selected="selected">Posta Moldovei | 2-3 days | Price: $ 0 </option>
-                                                <option value="5">DHL | 1-2 days| Price: $ 5</option>
-                                                <option value="10">UPS Express| 1 day | Price: $ 10</option>
-                                            </select>
-                                            <button class="btn1" @click="goshop()"><em class="fas fa-cart-plus"></em> Continue shopping</button>
-                                            <button class="btn2" id="validate" @click="validateForm"><em class="fa fa-credit-card"></em> Purchase now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+               <div class="container">
+                  <div class="row">
+                     <div class="coldelivery">
+                        <h1>BUY RIGHT NOW!!!</h1>
+                        <br>
+                        <label for="full__name"><em class="fa fa-user"></em> Enter your name:</label>
+                        <input type="text" id="full__name" name="firstname" placeholder="Andrei Lungu" v-model="full__name"/>
+                        <label for="phone"><em class="fa fa-phone"></em> Enter your phone:</label>
+                        <input type="text" id="phone" name="phone" placeholder="+37369098833" v-model="phone"/>
+                        <label for="email"><em class="fa fa-envelope"></em> Enter your email</label>
+                        <input type="email" id="email" name="email" placeholder="Andrei@mail.ru" v-model="email"/>
+                        <label for="address"><em class="fas fa-address-card"></em> Enter your address:</label>
+                        <input type="text" id="address" name="address" placeholder="Stefan cel Mare 13/108" v-model="address"/>
+                        <label for="city"><em class="fas fa-city"></em> Enter your city:</label>
+                        <input type="text" id="city" name="city" placeholder="Balti" v-model="city">
+                        <label for="comment"><em class="fas fa-comment"></em> Enter your comment:</label>
+                        <input type="text" id="comment" name="comment" placeholder="Pack the product better please !!!">
+                        <div class="row">
+                           <div class="coldelivery">
+                              <label for="delivery"><em class="fas fa-shipping-fast"></em> Delivery</label>
+                              <select id="delivery" name="delivery"  v-model="shippingPrice">
+                                 <option value="0" selected="selected">Posta Moldovei | 2-3 days | Price: $ 0 </option>
+                                 <option value="5">DHL | 1-2 days| Price: $ 5</option>
+                                 <option value="10">UPS Express| 1 day | Price: $ 10</option>
+                              </select>
+                              <button class="btn1" @click="goshop()"><em class="fas fa-cart-plus"></em> Continue shopping</button>
+                              <button class="btn2" id="validate" @click="validateForm"><em class="fa fa-credit-card"></em> Purchase now</button>
+                           </div>
                         </div>
+                     </div>
+                  </div>
+               </div>
             </section>
-            </div>
-        </div>
-  </div>
-        
-    </div>
+         </div>
+      </div>
+   </div>
+</div>
 </template>
 
 <script>
@@ -66,6 +64,9 @@ export default {
     }),
     computed: mapGetters(["CART"]),
     methods: {
+        goshop() {
+            this.$router.push("/products");
+        },
         ...mapActions(['CLEAR__CART']),
         validateForm() {
 
@@ -99,8 +100,6 @@ export default {
                 console.log("Wrong City");
                 return;
             }
-
-
 
             localStorage.setItem("full__name", this.full__name);
             localStorage.setItem("phone", this.phone);
