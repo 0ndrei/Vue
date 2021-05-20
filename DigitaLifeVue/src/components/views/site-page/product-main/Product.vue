@@ -85,7 +85,7 @@ export default {
 }
 
 .item-container:hover {
-	background: #d4d4d4;
+	background: white;
 	transition: all 0.7s ease-in-out;
 }
 
